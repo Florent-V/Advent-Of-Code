@@ -57,4 +57,4 @@ def solve_b(in_str):
     """returns the solution for part_b"""
     return sum(_get_num_b(_) for _ in parse_input(in_str))
 
-print(solve_b("input_01.txt"))
+print(solve_b("input_light.txt"))

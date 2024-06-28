@@ -1,13 +1,17 @@
 import sys
+import os
 import time
-from Utils.CalculateDuration import CalculateDuration
-from itertools import combinations, permutations, combinations_with_replacement
-import re
+# Get and add the Tools directory to sys.path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+tools_dir = os.path.abspath(os.path.join(current_dir, '..', '..', 'Tools'))
+sys.path.append(tools_dir)
+from PuzzleReader import PuzzleReader
+from CalculateDuration import CalculateDuration
 
 
-def read_file(file):
-    with open(file, "r") as f:
-        return f.read().split("\n")
+def get_file():
+    file_name = sys.argv[1] if len(sys.argv) > 1 else 'input_light.txt'
+    return PuzzleReader(file_name, os.path.dirname(os.path.abspath(__file__))).read_file()
 
 
 def part_1():
@@ -19,6 +23,7 @@ def part_2():
 
 
 def main():
+    file = get_file()
     chrono = CalculateDuration()
     part_1()
     # lines = read_file(sys.argv[1]) if len(sys.argv) > 1 else read_file('input_light.txt')
