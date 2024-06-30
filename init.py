@@ -1,5 +1,5 @@
 import os
-from Utils.ExtractPuzzle import ExtractPuzzle
+from Utils.Puzzle import ExtractPuzzle
 from Utils.FileHandler import FileHandler
 
 
@@ -43,7 +43,7 @@ def main():
     file_handler.reinitialise(directory, "input_light.txt", puzzle_light)
     file_handler.write_file()
 
-    file_handler.copy_file("bootstrap.py", f"{directory}/main.py")
+    file_handler.copy_file("bootstrap.py", f"{directory}/script.py")
 
     return
 

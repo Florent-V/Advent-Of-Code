@@ -20,7 +20,7 @@ def _get_num(in_line):
 
 def solve_a(in_str):
     """returns the solution for part_a"""
-    return sum(_get_num(_) for _ in parse_input(in_str))
+    return sum(_get_num(_) for _ in in_str)
 
 
 def _get_num_b(in_line):
@@ -55,6 +55,10 @@ def _get_num_b(in_line):
 
 def solve_b(in_str):
     """returns the solution for part_b"""
-    return sum(_get_num_b(_) for _ in parse_input(in_str))
+    return sum(_get_num_b(_) for _ in in_str)
 
-print(solve_b("input_light.txt"))
+with open("input.txt") as f:
+    lines = f.read().split("\n")
+
+print(solve_a(lines))
+print(solve_b(lines))

@@ -1,6 +1,6 @@
 from string import digits
 
-with open("input_light.txt") as f:
+with open("input.txt") as f:
     lines = f.read().split("\n")
 
 ans = 0

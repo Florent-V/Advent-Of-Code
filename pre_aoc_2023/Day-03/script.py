@@ -14,23 +14,24 @@ def get_file():
     return PuzzleReader(file_name, os.path.dirname(os.path.abspath(__file__))).read_file()
 
 
-def part_1():
+def part_1(lines):
     pass
 
 
-def part_2():
+def part_2(lines):
     pass
 
 
 def main():
-    file = get_file()
+    lines = get_file()
     chrono = CalculateDuration()
-    part_1()
-    # lines = read_file(sys.argv[1]) if len(sys.argv) > 1 else read_file('input_light.txt')
+    print(f"Résultat Partie 1: {part_1(lines)}")
     chrono.calculate()
+    print(f"Durée d'exécution Partie 1: {chrono.duration:.2e} sec")
     chrono.start_time = time.time()
-    part_2()
+    print(f"Résultat Partie 2: {part_2(lines)}")
     chrono.calculate()
+    print(f"Durée d'exécution Partie 2: {chrono.duration:.2e} sec")
 
 
 if __name__ == "__main__":
