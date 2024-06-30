@@ -57,6 +57,8 @@ class PuzzleHandler:
     def download_puzzle(self):
         url = f"{self.BASE_URL}/{self._year}/day/{self._day}/input"
         print(f"Download input from {url}...")
+        # response = requests.get(url, cookies={ 'session': self.aoc_id })
+        # Comment the previous line and uncomment the next one if you have SSL error
         response = requests.get(url, cookies={ 'session': self.aoc_id }, verify=False)
         if response.status_code != 200:
             print(f"Request error. Error code : {response.status_code}")
@@ -66,6 +68,8 @@ class PuzzleHandler:
     def download_puzzle_light(self):
         url = f"{self.BASE_URL}/{self._year}/day/{self._day}"
         print(f"Download input_light from {url}...")
+        # page = requests.get(url)
+        # Comment the previous line and uncomment the next one if you have SSL error
         page = requests.get(url, verify=False)
         if page.status_code != 200:
             print(f"Request error. Error code : {page.status_code}")

@@ -6,6 +6,23 @@ This repository contains my solutions to the [Advent of Code](https://adventofco
 
 You could find the solution for each puzzle in his own folder (`aoc_{year}/Day_{day}`), with the input file and the code to solve it.
 
+## Prerequisites
+
+If you wan to use the full potential of this repository you need to respect the following prerequisites:
+- You need to have Python 3 installed on your machine.
+- You need to install the libraries in the `requirements.txt` file. You could do that by running the following command:
+```bash
+pip install -r requirements.txt
+```
+- You need to have the `AOC_ID` environment variable set with your session cookie from the advent of code website. You can get your session cookie by logging in to the advent of code website and getting the value of the `session` cookie. To set the `AOC_ID` environment variable you could run the following command:
+```bash
+export AOC_ID=<your_session_cookie>
+```
+To make this change permanent you could add this line to your `.bashrc` or `.zshrc` file.
+
+
+
+
 ## Program
 
 Le but principal de ce programme est de vous accompagner dans la résolution des puzzles de l'Advent of Code. Ce programme  peut :
