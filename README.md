@@ -4,11 +4,13 @@
 
 This repository contains my solutions to the [Advent of Code](https://adventofcode.com/) challenges and also some utilities to help you solve the puzzles.
 
-You could find the solution for each puzzle in his own folder (`aoc_{year}/Day_{day}`), with the input file and the code to solve it.
+You could find my solutions for each puzzle in his own folder (`aoc_{year}/Day_{day}`), with the input file and the code to solve it.
+
+But you could also use this repository to solve the puzzles by yourself. This repository contains some utilities to help you with that.
 
 ## Prerequisites
 
-If you wan to use the full potential of this repository you need to respect the following prerequisites:
+If you want to use the full potential of this repository you need to respect the following prerequisites:
 - You need to have Python 3 installed on your machine.
 - You need to install the libraries in the `requirements.txt` file. You could do that by running the following command:
 ```bash
@@ -18,29 +20,22 @@ pip install -r requirements.txt
 ```bash
 export AOC_ID=<your_session_cookie>
 ```
-To make this change permanent you could add this line to your `.bashrc` or `.zshrc` file.
-
-
+To make this change permanent you could add this line to your `.bashrc` or `.zshrc` file. Depending on your shell.
 
 
 ## Program
 
-Le but principal de ce programme est de vous accompagner dans la résolution des puzzles de l'Advent of Code. Ce programme  peut :
-- créer une structure de dossier pour y inclure chaque puzzle et un fichier pour le résoudre
+Le but principal de ce programme est de vous accompagner dans la résolution des puzzles de l'Advent of Code. Ce programme va, dans un premier temps, créer une structure de dossier pour y inclure chaque puzzle et un fichier pour le résoudre :
   - /aoc_{year}/
     - /Day_{day}/
       - input.txt
       - input_light.txt
       - solution.py
-- créer un fichier solution.py qui étend
-- exécuter les fonctions présentes dans le fichier solution.py
-- exécuter les tests présents dans le fichier solution.py
-You could also use this repo to solve the puzzles by yourself. This repo contains some utilities to help you with that.
-To use this file you need to export the `AOC_ID` environment variable with your session cookie from the advent of code website.
-  You could do that by running `export AOC_ID=<your_session_cookie>` in your terminal.
-  To get your session cookie you need to log in to the advent of code website and get the value of the `session` cookie.
+
+Le fichier `solution.py` contient les méthodes `part_1` et `part_2` qu'il faudra implémenter pour résoudre les deux parties du puzzle du jour. Vous pouvez également implémenter d'autres fonctions pour vous aider à résoudre les puzzles. Gardez à l'esprit que les fonctions `part_1` et `part_2` seront appelées par les méthodes `solve` et `solve_both` qui sont présentes dans la classe `SolutionBase` dans d'autres commandes du programme.
+
+This repo also contains some utilities to help you with that.
 - some useful functions to read the input files
-- some useful functions to test your code
 - some useful functions to help you to solve the puzzles
 
 ## Use Cases
