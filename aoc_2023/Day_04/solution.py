@@ -2,15 +2,19 @@ from Libs.SolutionBase import SolutionBase
 import re
 
 class Solution(SolutionBase):
+
+  def format_data(self, card):
+    winning_numbers = set(card[1].split())
+    my_numbers = set(card[2].split())
+    bilan = list(my_numbers & winning_numbers)
+    return bilan
   
   def part_1(self, lines):
     """returns the solution for part_a"""
     cards = list(map(lambda x: re.split(r'[:,|]', x), lines))
     total_points = 0
     for card in cards:
-        winning_numbers = set(card[1].split())
-        my_numbers = set(card[2].split())
-        bilan = list(my_numbers & winning_numbers)
+        bilan = self.format_data(card)
         card_points = 1 * (2**(len(bilan)-1)) if len(bilan) > 0 else 0
         total_points += card_points
     return total_points
@@ -22,9 +26,7 @@ class Solution(SolutionBase):
     count_scratchcards = []
     for card in cards:
         card_number = card[0].split()[1]
-        winning_numbers = set(card[1].split())
-        my_numbers = set(card[2].split())
-        bilan = list(my_numbers & winning_numbers)
+        bilan = self.format_data(card)
         formatted_cards.append([int(card_number), len(bilan)])
         count_scratchcards.append([int(card_number), 1])
     total_scrarchcards = 0
