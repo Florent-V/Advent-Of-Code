@@ -28,3 +28,9 @@ def search_item_in_matrix_around(matrix, i, j, match_func):
 
     if 0 <= si < len(matrix) and 0 <= sj < len(matrix[si]) and match_func(matrix[si][sj]):
           return (si, sj)
+    
+def matrix_shape(matrix):
+  """
+  Return the shape of a matrix as a tuple (number of rows, number of columns).
+  """
+  return len(matrix), len(matrix[0])

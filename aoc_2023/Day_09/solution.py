@@ -1,9 +1,7 @@
 from Libs.SolutionBase import SolutionBase
+from Libs.Parsers import parse_matrice_string_to_int_list
 
 class Solution(SolutionBase):
-
-  def format_data(self, lines):
-    return [[int(i) for i in line.split()] for line in lines]
 
   def calc_diff_to_zero(self, line):
     flag = True
@@ -32,7 +30,7 @@ class Solution(SolutionBase):
   
   def part_1(self, lines):
     """returns the solution for part_a"""
-    lines = self.format_data(lines)
+    lines = parse_matrice_string_to_int_list(lines)
     extrapolated_values = []
     for line in lines:
         dataset = self.calc_diff_to_zero(line)
@@ -41,7 +39,7 @@ class Solution(SolutionBase):
 
   def part_2(self, lines):
     """returns the solution for part_b"""
-    lines = self.format_data(lines)
+    lines = parse_matrice_string_to_int_list(lines)
     extrapolated_values = []
     for line in lines:
         dataset = self.calc_diff_to_zero(line)

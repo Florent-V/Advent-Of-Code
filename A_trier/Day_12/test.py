@@ -12,7 +12,7 @@ def recurse(lava, springs, result=0):
             result += recurse(lava[nxt + 1:], springs)
     return result
 
-with open("input.txt", "r") as file:
+with open("input_light.txt", "r") as file:
     data = [x.split() for x in file.read().splitlines()]
     p1, p2 = 0, 0
     for e, (lava, springs) in enumerate(data):
