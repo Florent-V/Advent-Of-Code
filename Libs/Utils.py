@@ -34,3 +34,10 @@ def matrix_shape(matrix):
   Return the shape of a matrix as a tuple (number of rows, number of columns).
   """
   return len(matrix), len(matrix[0])
+
+
+def transpose_matrix(matrix):
+  """
+  Transpose a matrix.
+  """
+  return [''.join(i) for i in zip(*matrix)]
